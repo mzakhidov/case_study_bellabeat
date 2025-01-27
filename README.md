@@ -28,7 +28,7 @@ FitBit Fintess Tracker Data (Kaggle). For this case study, FitBit Fitness Tracke
 + Bellabeat membership
 
 ### Data Cleaning
-
++ Date field has been standardized to DD-MM-YY across all the data files 
 
 ### Data Limitations
 1. Data is old (2001) and isn't up to date
@@ -39,8 +39,26 @@ FitBit Fintess Tracker Data (Kaggle). For this case study, FitBit Fitness Tracke
 
 It’s worth noting that data only covers two months. Due to its limitation, data insights might not give viewer the full picture. Several years of annual data could be appropriate. Data also comes from a single brand/company for smart devices, FitBit while there are multiple major players in this market. It can’t be taken as the whole industry data due to this limitation. 
 
+### Data Analysis in R
+###### Load library and files
+```
+install.packages('tidyverse')
+install.packages('ggplot2')
+```
+
+
 ### Summary of the analysis
++ S
++ S
++ S
++ S
 
 ### Visualizations
 
+All these data visualizations can be found here
+
+
 ### Recommendations
+1. S
+2. S
+3. S
