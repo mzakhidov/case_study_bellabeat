@@ -27,8 +27,6 @@ FitBit Fintess Tracker Data (Kaggle). For this case study, FitBit Fitness Tracke
 + Spring
 + Bellabeat membership
 
-### Data Cleaning
-+ Date field has been standardized to DD-MM-YY across all the data files 
 
 ### Data Limitations
 1. Data is old (2001) and isn't up to date
@@ -52,7 +50,7 @@ library(ggplot2)
 
 #### Import data sets
 
-First, I uploaded the files directly into R Cloud in order to directly read the file without pasting full file path in the computer. 
+First, I uploaded the files directly into R Cloud in order to directly read the file without pasting full file path in the computer. Then, I pulled the file through read_csv function as part of R tidyverse package. 
 
 ```
 daily_activity <-read_csv("dailyActivity_merged.csv")
@@ -63,6 +61,11 @@ sleep_day <- read.csv("sleepDay_merged.csv")
 weight_log <- read.csv("weightLogInfo_merged.csv")
 
 ```
+
+### Data Cleaning
++ Date field has been standardized to DD-MM-YY across all the data files through the function 
+
+
 
 #### Data Visualizations
 
