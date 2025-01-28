@@ -40,15 +40,38 @@ FitBit Fintess Tracker Data (Kaggle). For this case study, FitBit Fitness Tracke
 It’s worth noting that data only covers two months. Due to its limitation, data insights might not give viewer the full picture. Several years of annual data could be appropriate. Data also comes from a single brand/company for smart devices, FitBit while there are multiple major players in this market. It can’t be taken as the whole industry data due to this limitation. 
 
 ### Data Analysis in R
-###### Load library and files
+#### Load library and files
 ```
 install.packages('tidyverse')
-install.packages('ggplot2')
+install.packages('janitor') ???
 ```
+library(tidyverse)  
+library(lubridate)
+library(ggplot2)
+
+
+#### Import data sets
+
+First, I uploaded the files directly into R Cloud in order to directly read the file without pasting full file path in the computer. 
+
+```
+daily_activity <-read_csv("dailyActivity_merged.csv")
+daily_calories <- read.csv("dailyCalories_merged.csv")
+daily_intensities <- read.csv("dailyIntensities_merged.csv")
+daily_steps <- read.csv("dailySteps_merged.csv")
+sleep_day <- read.csv("sleepDay_merged.csv")
+weight_log <- read.csv("weightLogInfo_merged.csv")
+
+```
+
+#### Data Visualizations
+
+ggplot(data=daily_activity) + geom_point(mapping=aes(x=TotalSteps, y=Calories, color=Calories))
+
 
 
 ### Summary of the analysis
-+ S
++ There's a positive correlation between number of total steps each customer has taken with the calories burned
 + S
 + S
 + S
