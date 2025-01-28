@@ -1,4 +1,4 @@
-# Case Study - How Can a Welness Technology Company Play It Smart?
+# Case Study - How Can a Wellness Technology Company Play It Smart?
 
 ##### This is a capstone project as part of Google Data Analytics course. 
 
