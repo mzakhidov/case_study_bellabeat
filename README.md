@@ -66,14 +66,15 @@ weight_log <- read.csv("weightLogInfo_merged.csv") <- This data file won't be us
 + Date field has been standardized to DD-MM-YY across all the data files through the function 
 
 
-
+Checking the number of unique participants in each imported data file
+```
 n_distinct(daily_activity$Id)
 n_distinct(daily_calories$Id)
 n_distinct(daily_intensities$Id)
 n_distinct(daily_steps$Id)
 n_distinct(sleep_day$Id)
 n_distinct(weight_log$Id)
-
+```
 
 #### Data Visualizations
 
