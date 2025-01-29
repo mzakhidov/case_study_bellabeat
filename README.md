@@ -29,11 +29,12 @@ FitBit Fintess Tracker Data (Kaggle). For this case study, FitBit Fitness Tracke
 
 
 ### Data Limitations
-1. Data is old (2001) and isn't up to date
-2. Limited window (2 months) which might or might not reflect seasonality
-3. Potential of bias due to the limited (30) number of customer data
-4. Data is only from FitBit
-5. S
+1. Data is old (2016) which might not match the current trends
+2. Potential of bias due to the limited (30) number of customer data. This is the bare minimum needed for data analysis. 
+3. Data doesn't feature demographics data while Bellabeat specifically targets womens
+4. Limited window (2 months) which might or might not reflect seasonality
+6. Data is only from FitBit (single smart device brand while there are other relevant players in the market)
+7. S
 
 It’s worth noting that data only covers two months. Due to its limitation, data insights might not give viewer the full picture. Several years of annual data could be appropriate. Data also comes from a single brand/company for smart devices, FitBit while there are multiple major players in this market. It can’t be taken as the whole industry data due to this limitation. 
 
@@ -66,7 +67,7 @@ weight_log <- read.csv("weightLogInfo_merged.csv") <- This data file won't be us
 + Date field has been standardized to DD-MM-YY across all the data files through the function 
 
 
-Checking the number of unique participants in each imported data file
+Checking the number of unique participants in each imported data file. 
 ```
 n_distinct(daily_activity$Id)
 n_distinct(daily_calories$Id)
@@ -83,7 +84,7 @@ ggplot(data=daily_activity) + geom_point(mapping=aes(x=TotalSteps, y=Calories, c
 
 
 ### Summary of the analysis
-+ There's a positive correlation between number of total steps each customer has taken with the calories burned
++ There's a positive correlation between number of total steps each customer has taken with the calories burned. This could obviously be used to encourage/notify customers in order to build positive energy/connection between the user and the product
 + S
 + S
 + S
