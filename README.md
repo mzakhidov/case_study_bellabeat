@@ -58,13 +58,21 @@ daily_calories <- read.csv("dailyCalories_merged.csv")
 daily_intensities <- read.csv("dailyIntensities_merged.csv")
 daily_steps <- read.csv("dailySteps_merged.csv")
 sleep_day <- read.csv("sleepDay_merged.csv")
-weight_log <- read.csv("weightLogInfo_merged.csv")
+weight_log <- read.csv("weightLogInfo_merged.csv") <- This data file won't be used as there are only 8 unique user IDs which is too small of a sample size. 
 
 ```
 
 ### Data Cleaning
 + Date field has been standardized to DD-MM-YY across all the data files through the function 
 
+
+
+n_distinct(daily_activity$Id)
+n_distinct(daily_calories$Id)
+n_distinct(daily_intensities$Id)
+n_distinct(daily_steps$Id)
+n_distinct(sleep_day$Id)
+n_distinct(weight_log$Id)
 
 
 #### Data Visualizations
