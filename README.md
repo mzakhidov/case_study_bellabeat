@@ -79,19 +79,20 @@ n_distinct(weight_log$Id)
 
 Checking for and removing duplicate values in each data file.
 
-
+```
 sum(duplicated(daily_activities))
 sum(duplicated(daily_calories))
 sum(duplicated(daily_intensities))
 sum(duplicated(daily_steps))
 sum(duplicated(sleep_day))   - Three (3) duplicates 
 sum(duplicated(weight_log))
+```
 
 Removing 3 duplicates in sleep_day data file and renaming the file as daily_sleep.  
-
+```
 daily_sleep <- unique(sleep_day)  
 sum(duplicated(daily_sleep))  
-
+```
 
 #### Data Visualizations
 
