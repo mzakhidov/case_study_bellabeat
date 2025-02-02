@@ -94,6 +94,26 @@ daily_sleep <- unique(sleep_day)
 sum(duplicated(daily_sleep))  
 ```
 
+Checking for NA values 
+```
+sum(is.na(daily_activity))
+sum(is.na(daily_calories))
+sum(is.na(daily_intentisities))
+sum(is.na(daily_steps))
+sum(is.na(daily_sleep))
+sum(is.na(weight_log)) <- 65 NA values
+
+```
+
+Adding a new column for weekdays
+```
+daily_activity <- daily_activity %>% mutate( Weekday = weekdays(as.Date(ActivityDate, "%m/%d/%Y")))
+
+```
+
+
+
+
 #### Data Visualizations
 
 ggplot(data=daily_activity) + geom_point(mapping=aes(x=TotalSteps, y=Calories, color=Calories))
