@@ -87,9 +87,10 @@ sum(duplicated(daily_steps))
 sum(duplicated(sleep_day))   - Three (3) duplicates 
 sum(duplicated(weight_log))
 
-Removing 3 duplicates in sleep_day data file and renaming the file as daily_sleep. 
+Removing 3 duplicates in sleep_day data file and renaming the file as daily_sleep.  
+
 daily_sleep <- unique(sleep_day)  
-sum(duplicated(daily_sleep))
+sum(duplicated(daily_sleep))  
 
 
 #### Data Visualizations
