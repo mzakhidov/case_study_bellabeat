@@ -116,9 +116,17 @@ daily_activity <- daily_activity %>% mutate( Weekday = weekdays(as.Date(Activity
 
 #### Data Visualizations
 
+Correlation between total steps and calories: 
+```
 ggplot(data=daily_activity) + geom_point(mapping=aes(x=TotalSteps, y=Calories, color=Calories))
+```
 
-
+Total steps by the weekday:
+```
+ggplot(data=daily_activity, aes(x=Weekday, y=TotalSteps)) + 
+    geom_bar(stat="identity", fill="green")+
+    labs(title="Steps by Weekday", y="Total Steps") 
+```
 
 ### Summary of the analysis
 + There's a positive correlation between number of total steps each customer has taken with the calories burned. This could obviously be used to encourage/notify customers in order to build positive energy/connection between the user and the product
