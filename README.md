@@ -111,7 +111,11 @@ daily_activity <- daily_activity %>% mutate( Weekday = weekdays(as.Date(Activity
 
 ```
 
+Order the days of the week:
+```
+daily_activity$Weekday <- ordered(daily_activity$Weekday, levels=c("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"))
 
+```
 
 
 #### Data Visualizations
@@ -124,13 +128,13 @@ ggplot(data=daily_activity) + geom_point(mapping=aes(x=TotalSteps, y=Calories, c
 Total steps by the weekday:
 ```
 ggplot(data=daily_activity, aes(x=Weekday, y=TotalSteps)) + 
-    geom_bar(stat="identity", fill="green")+
+    geom_bar(stat="identity", fill="black")+
     labs(title="Steps by Weekday", y="Total Steps") 
 ```
 
 ### Summary of the analysis
 + There's a positive correlation between number of total steps each customer has taken with the calories burned. This could obviously be used to encourage/notify customers in order to build positive energy/connection between the user and the product
-+ S
++ Users seem to take the most number of steps in middle of the workweek: Tuesday, Wednesday, Thursday. 
 + S
 + S
 
@@ -139,7 +143,8 @@ ggplot(data=daily_activity, aes(x=Weekday, y=TotalSteps)) +
 All these data visualizations can be found here
 
 
+
 ### Recommendations
-1. S
-2. S
+1. Encourage users by giving them calories burned notifications as a "reward" notification in Bellabeat products
+2. Focus on days where users take the least amount of steps. Suggest activities to the user in order to increase their total steps on these days
 3. S
