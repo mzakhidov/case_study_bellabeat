@@ -7,6 +7,9 @@
 
 https://github.com/mzakhidov/case_study_bellabeat/blob/4b531718de9d85c6600f9e8151895bf4d242c324/bellabeat_logo
 
+![Bellabeat logo](https://github.com/user-attachments/assets/ee5c7883-a58b-4278-8a96-d0ce6e0e4ea5)
+
+
 ### Business Task 
 Analyze smart device usage data in order to gain insight into how consumers use non-Bellabeat smart devices. Goals are the following:
 + Identify trends in smart device usage
