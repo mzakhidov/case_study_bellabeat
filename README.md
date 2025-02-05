@@ -5,8 +5,9 @@
 ### Introduction
 [Bellabeat](https://bellabeat.com) is a high-tech company that manufactures health-focused smart products for women. Collecting data on activity, sleep, stress, and reproductive health has allowed Bellabeat to empower women with knowledge about their own health and habits. Since it was founded in 2013, Bellabeat has grown rapidly and quickly positioned itself as a tech-driven wellness company for women.
 
-https://github.com/mzakhidov/case_study_bellabeat/blob/4b531718de9d85c6600f9e8151895bf4d242c324/bellabeat_logo
 
+
+![Alt text]([path/to/image.png](https://github.com/mzakhidov/case_study_bellabeat/blob/4b531718de9d85c6600f9e8151895bf4d242c324/bellabeat_logo))
 ![Bellabeat logo](https://github.com/user-attachments/assets/ee5c7883-a58b-4278-8a96-d0ce6e0e4ea5)
 
 
