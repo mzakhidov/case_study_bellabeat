@@ -1,20 +1,22 @@
 # Case Study - How Can a Wellness Technology Company Play It Smart?
 
-##### This is a capstone project as part of Google Data Analytics course. 
+#### This is a capstone project as part of Google Data Analytics course. 
 
 ### Introduction
-[Bellabeat](https://bellabeat.com) is a high-tech company that manufactures health-focused smart products for women. Collecting data on activity, sleep, stress, and reproductive health has allowed Bellabeat to empower women with knowledge about their own health and habits. Since it was founded in 2013, Bellabeat has grown rapidly and quickly positioned itself as a tech-driven wellness company for women.
+[Bellabeat](https://bellabeat.com) is a high-tech company that manufactures health-focused smart wearable products for women. Collecting data on activity, sleep, stress, and reproductive health has allowed Bellabeat to empower women with knowledge about their own health and habits. Since it was founded in 2013, Bellabeat has grown rapidly and quickly positioned itself as a tech-driven wellness company for women. Urška Sršen, cofounder and Chief Creative Officer of Bellabeat, believes that analyzing smart device data could help unlock new growth oppounities for the company.
 
 <img src="https://github.com/mzakhidov/case_study_bellabeat/blob/main/Bellabeat%20logo.png?raw=true" alt="Bellabeat Logo" width="300">
 
 ### Business Task 
-Analyze smart device usage data in order to gain insight into how consumers use non-Bellabeat smart devices. Goals are the following:
+Analyze smart device usage data in order to gain insight into how consumers use their non-Bellabeat smart devices. Insights should help guide the marketing strategy for the Bellabeat. 
+
+Primary goals are:
 + Identify trends in smart device usage
 + Determine how these trends can be applied to Bellabeat customers
 + Use these trends to optimize Bellabeat marketing strategy
 
-### Data Sources: 
-FitBit Fintess Tracker Data (Kaggle). For this case study, FitBit Fitness Tracker Data has been utilized. It covers 2 months of data between 03.12.2016-05.12.2016. 
+### Data Source 
+FitBit Fintess Tracker Data (Kaggle). For this case study, FitBit Fitness Tracker Data has been utilized. It covers a month of data between 04.12.2016-05.12.2016. 
 + [Data Link](https://www.kaggle.com/datasets/arashnic/fitbit) 
 
 ### Stakeholders
@@ -23,21 +25,22 @@ FitBit Fintess Tracker Data (Kaggle). For this case study, FitBit Fitness Tracke
 + Bellabeat marketing analytics team
 
 ### Products
-+ Bellabeat app
-+ Leaf
-+ Time
-+ Spring
-+ Bellabeat membership
-
++ **Bellabeat app**: The Bellabeat app provides users with health data related to their activity, sleep, stress, menstrual cycle, and mindfulness habits. This data can help users beer understand their current habits and make healthy decisions. The Bellabeat app connects to their line of sma wellness products.
++ **Leaf**: Bellabeat’s classic wellness tracker can be worn as a bracelet, necklace, or clip. The Leaf tracker connects to the Bellabeat app to track activity, sleep, and stress.
++ **Time**: This wellness watch combines the timeless look of a classic timepiece with sma technology to track user activity, sleep, and stress. The Time watch connects to the Bellabeat app to provide you with insights into your daily wellness.
++ **Spring**: This is a water bole that tracks daily water intake using sma technology to ensure that you are appropriately hydrated throughout the day. The Spring bole connects to the Bellabeat app to track your
+hydration levels.
++ **Bellabeat membership**: Bellabeat also oers a subscription-based membership program for users. Membership gives users 24/7 access to fully personalized guidance on nutrition, activity, sleep, health and
+beauty, and mindfulness based on their lifestyle and goals.
 
 ### Data Limitations
-1. Data is old (2016) which might not match the current trends
+1. Data is old (from 2016) which may not match the current trends.
 2. Potential of bias due to the limited (30) number of customer data. This is the bare minimum needed for data analysis. 
 3. Data doesn't feature demographics data while Bellabeat specifically targets womens
-4. Limited window (2 months) which might or might not reflect seasonality. People might tend to be more active in warmer months. 
-6. Data is only from FitBit (single smart device brand while there are other relevant players in the market)
+4. Limited window for data (1 month) which might potentially reflect seasonality. People tend to be more active in warmer months. 
+5. Data is only from FitBit (single smart device brand while there are other relevant players in the market such as Apple, Samsung, etc.)
 
-### Data Analysis in R
+
 #### Load library and files
 ```
 install.packages('tidyverse')
@@ -124,7 +127,7 @@ combined_data <- merge(daily_activity,daily_sleep,by = c("Id"), all=TRUE)
 ```
 
 
-#### Data Visualizations
+#### Data Analysis and Visualizations
 
 Correlation between total steps and calories: 
 ```
