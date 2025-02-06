@@ -34,11 +34,8 @@ FitBit Fintess Tracker Data (Kaggle). For this case study, FitBit Fitness Tracke
 1. Data is old (2016) which might not match the current trends
 2. Potential of bias due to the limited (30) number of customer data. This is the bare minimum needed for data analysis. 
 3. Data doesn't feature demographics data while Bellabeat specifically targets womens
-4. Limited window (2 months) which might or might not reflect seasonality
+4. Limited window (2 months) which might or might not reflect seasonality. People might tend to be more active in warmer months. 
 6. Data is only from FitBit (single smart device brand while there are other relevant players in the market)
-7. S
-
-It’s worth noting that data only covers two months. Due to its limitation, data insights might not give viewer the full picture. Several years of annual data could be appropriate. Data also comes from a single brand/company for smart devices, FitBit while there are multiple major players in this market. It can’t be taken as the whole industry data due to this limitation. 
 
 ### Data Analysis in R
 #### Load library and files
@@ -120,14 +117,11 @@ daily_activity$Weekday <- ordered(daily_activity$Weekday, levels=c("Monday","Tue
 ```
 
 
-
-
 Combine data sets
 ```
 combined_data <- merge(daily_activity,daily_sleep,by = c("Id"), all=TRUE)
 
 ```
-
 
 
 #### Data Visualizations
@@ -162,7 +156,7 @@ ggplot(data=combined_data) + geom_point(mapping=aes(x=TotalMinutesAsleep/60, y=C
 + There's a positive correlation between number of total steps each customer has taken with the calories burned. This could obviously be used to encourage/notify customers in order to build positive energy/connection between the user and the product
 + Users seem to take the most number of steps in middle of the workweek: Tuesday, Wednesday, Thursday. 
 + There's a positive correlation on calories burned and sleep time (between 5-10 hours)
-+ S
++ 
 
 ### Visualizations
 
