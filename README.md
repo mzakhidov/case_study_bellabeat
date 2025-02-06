@@ -11,12 +11,13 @@
 Analyze smart device usage data in order to gain insight into how consumers use their non-Bellabeat smart devices. Insights should help guide the marketing strategy for the Bellabeat. 
 
 Primary goals are:
-+ Identify trends in smart device usage
++ Identify trends in smart wearable device usage data
 + Determine how these trends can be applied to Bellabeat customers
 + Use these trends to optimize Bellabeat marketing strategy
 
 ### Data Source 
-FitBit Fintess Tracker Data (Kaggle). For this case study, FitBit Fitness Tracker Data has been utilized. It covers a month of data between 04.12.2016-05.12.2016. 
+FitBit Fintess Tracker Data (CC0: Public Domain, dataset made available through Mobius). This Kaggle data set contains personal tness tracker from thiy tbit users. Thiy eligible Fitbit users consented to the submission of
+personal tracker data, including minute-level output for physical activity, hea rate, and sleep monitoring. It includes information about daily activity, steps, and hea rate that can be used to explore users’ habits. It covers a month of data between 04.12.2016-05.12.2016. 
 + [Data Link](https://www.kaggle.com/datasets/arashnic/fitbit) 
 
 ### Stakeholders
@@ -40,20 +41,24 @@ beauty, and mindfulness based on their lifestyle and goals.
 4. Limited window for data (1 month) which might potentially reflect seasonality. People tend to be more active in warmer months. 
 5. Data is only from FitBit (single smart device brand while there are other relevant players in the market such as Apple, Samsung, etc.)
 
+### Data Preparation and Processing
 
-#### Load library and files
+Based on the initial review of CSV files through Excel, R studio has been chosen to prepare, process, analyze the data. Initially, the R packages of tidyverse and janitor have been installed and the respective libraries have been loaded. 
+
+#### Install packages and load libraries
 ```
 install.packages('tidyverse')
-install.packages('janitor') ???
+install.packages('janitor') 
+```
 ```
 library(tidyverse)  
 library(lubridate)
 library(ggplot2)
-
+```
 
 #### Import data sets
 
-First, I uploaded the files directly into R Cloud in order to directly read the file without pasting full file path in the computer. Then, I pulled the file through read_csv function as part of R tidyverse package. 
+As "dailyActivity_merged.csv" file contained most of the high level data metrics, it was decided that only daily data files would be imported for analysis. Downloaded csv files have been uploaded into R Cloud in order to directly read the file. Then, the files have been pulled through read_csv function as part of R tidyverse package and renamed accordingly for simplicity. 
 
 ```
 daily_activity <-read_csv("dailyActivity_merged.csv")
@@ -61,13 +66,15 @@ daily_calories <- read.csv("dailyCalories_merged.csv")
 daily_intensities <- read.csv("dailyIntensities_merged.csv")
 daily_steps <- read.csv("dailySteps_merged.csv")
 sleep_day <- read.csv("sleepDay_merged.csv")
-weight_log <- read.csv("weightLogInfo_merged.csv") <- This data file won't be used as there are only 8 unique user IDs which is too small of a sample size. 
+weight_log <- read.csv("weightLogInfo_merged.csv") 
 
 ```
 
 ### Data Cleaning
-+ Date field has been standardized to DD-MM-YY across all the data files through the function 
-
+Date field has been standardized to DD-MM-YY across all the data files through the function.
+```
+daily_activity <- daily_activity %>% mutate( Weekday = weekdays(as.Date(ActivityDate, "%m/%d/%Y")))
+```
 
 Checking the number of unique participants in each imported data file. 
 ```
@@ -76,8 +83,10 @@ n_distinct(daily_calories$Id)
 n_distinct(daily_intensities$Id)
 n_distinct(daily_steps$Id)
 n_distinct(sleep_day$Id)
-n_distinct(weight_log$Id)
+n_distinct(weight_log$Id) 
 ```
+
+The "weight_log" file won't be used as there are only 8 unique user IDs which is too small of a sample size. 
 
 Checking for and removing duplicate values in each data file.
 
@@ -121,6 +130,9 @@ daily_activity$Weekday <- ordered(daily_activity$Weekday, levels=c("Monday","Tue
 
 
 Combine data sets
+
+As "daily_activity" file contained metrics on calories, intentisies, steps, it was decided that only "daily_activity" and "daily_sleep" files would be combined and named as "combined_data".
+
 ```
 combined_data <- merge(daily_activity,daily_sleep,by = c("Id"), all=TRUE)
 
@@ -141,7 +153,7 @@ ggplot(data=combined_data) + geom_point(mapping=aes(x=TotalSteps, y=Calories, co
 Total steps by the weekday:
 ```
 ggplot(data=daily_activity, aes(x=Weekday, y=TotalSteps)) + 
-    geom_bar(stat="identity", fill="black")+
+    geom_bar(stat="identity", fill="blue")+
     labs(title="Steps by Weekday", y="Total Steps") 
 ```
 ![steps by weekday](https://github.com/user-attachments/assets/584cd4fa-9c36-4f44-9cb8-b4f776614959)
@@ -159,16 +171,14 @@ ggplot(data=combined_data) + geom_point(mapping=aes(x=TotalMinutesAsleep/60, y=C
 + There's a positive correlation between number of total steps each customer has taken with the calories burned. This could obviously be used to encourage/notify customers in order to build positive energy/connection between the user and the product
 + Users seem to take the most number of steps in middle of the workweek: Tuesday, Wednesday, Thursday. 
 + There's a positive correlation on calories burned and sleep time (between 5-10 hours)
-+ 
 
 ### Visualizations
 
-All these data visualizations can be found here:
-
+All these data visualizations can be found here: Link
 
 
 ### Recommendations
 1. Encourage users by giving them calories burned notifications as a "reward" notification in Bellabeat products
 2. Focus on days where users take the least amount of steps. Suggest activities to the user in order to increase their total steps on these days
-3. S
+3. Send reminders to users on getting enough sleep between 6-10 hours
 4. Due to data limitations, all the above recommendations might require further validation based on recent data
