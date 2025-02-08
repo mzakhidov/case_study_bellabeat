@@ -147,8 +147,10 @@ ggplot(data=daily_activity) + geom_point(mapping=aes(x=TotalSteps, y=Calories, c
 
 ggplot(data=combined_data) + geom_point(mapping=aes(x=TotalSteps, y=Calories, color=Calories))
 
-
 ```
+
+![calories_totalsteps](https://github.com/user-attachments/assets/016d251d-b6d8-433a-aa1c-a9f2a228231c)
+
 
 Total steps by the weekday:
 ```
@@ -156,7 +158,8 @@ ggplot(data=daily_activity, aes(x=Weekday, y=TotalSteps)) +
     geom_bar(stat="identity", fill="blue")+
     labs(title="Steps by Weekday", y="Total Steps") 
 ```
-![steps by weekday](https://github.com/user-attachments/assets/584cd4fa-9c36-4f44-9cb8-b4f776614959)
+
+![steps_weekdays](https://github.com/user-attachments/assets/d9cf24da-94e0-4e15-bf95-0c6d84b7cd00)
 
 
 Correlation between sleep and calories:
