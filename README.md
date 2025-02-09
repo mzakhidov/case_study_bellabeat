@@ -40,6 +40,8 @@ beauty, and mindfulness based on their lifestyle and goals.
 3. Data doesn't feature demographics data while Bellabeat specifically targets womens
 4. Limited window for data (1 month) which might potentially reflect seasonality. People tend to be more active in warmer months. 
 5. Data is only from FitBit (single smart device brand while there are other relevant players in the market such as Apple, Samsung, etc.)
+6. Data isn't comprehensive as it doesn't contain info on gender, age, etc.
+7. Data isn't original as it doesn't directly come from FitBit, rather from 3rd party. 
 
 ### Data Preparation and Processing
 
