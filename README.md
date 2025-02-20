@@ -198,7 +198,7 @@ ggplot(data=combined_data) + geom_point(mapping=aes(x=TotalMinutesAsleep/60, y=C
 
 ### Summary of the analysis
 + There's a positive correlation between number of total steps each customer has taken with the calories burned. This could obviously be used to encourage/notify customers in order to build positive energy/connection between the user and the product
-+ Users seem to take the most number of steps in middle of the workweek: Tuesday, Wednesday, Thursday. 
++ Users seem to take the most number of steps in middle of the workweek: Tuesday, Wednesday, Thursday.
 + There's a positive correlation on calories burned and sleep time (between 5-10 hours)
 
 ### Visualizations
