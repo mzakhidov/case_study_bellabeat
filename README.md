@@ -1,6 +1,6 @@
 # Case Study - How Can a Wellness Technology Company Play It Smart?
 
-#### This is a capstone project as part of Google Data Analytics course. 
+#### This is a capstone project as part of the Google Data Analytics course. 
 
 ### Introduction
 [Bellabeat](https://bellabeat.com) is a high-tech company that manufactures health-focused smart wearable products for women. Collecting data on activity, sleep, stress, and reproductive health has allowed Bellabeat to empower women with knowledge about their own health and habits. Since it was founded in 2013, Bellabeat has grown rapidly and quickly positioned itself as a tech-driven wellness company for women. Urška Sršen, cofounder and Chief Creative Officer of Bellabeat, believes that analyzing smart device data could help unlock new growth oppounities for the company.
