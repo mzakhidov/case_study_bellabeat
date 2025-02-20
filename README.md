@@ -114,7 +114,7 @@ sum(is.na(daily_calories))
 sum(is.na(daily_intentisities))
 sum(is.na(daily_steps))
 sum(is.na(daily_sleep))
-sum(is.na(weight_log)) <- 65 NA values
+sum(is.na(weight_log)) <- Sixty five (65) NA values
 
 ```
 
@@ -145,13 +145,16 @@ combined_data <- merge(daily_activity,daily_sleep,by = c("Id"), all=TRUE)
 
 Correlation between total steps and calories: 
 ```
-ggplot(data=daily_activity) + geom_point(mapping=aes(x=TotalSteps, y=Calories, color=Calories))
 
-ggplot(data=combined_data) + geom_point(mapping=aes(x=TotalSteps, y=Calories, color=Calories))
+ggplot(combined_data, aes(x = TotalSteps, y = Calories)) +
+  geom_point(color = "darkgreen", alpha = 0.5) +
+  geom_smooth(method = "lm", color = "red") + # Add a trend line
+  labs(title = "Steps vs. Calories Burned", x = "Total Steps", y = "Calories Burned") +
+  theme_bw()
 
 ```
 
-![calories_totalsteps](https://github.com/user-attachments/assets/016d251d-b6d8-433a-aa1c-a9f2a228231c)
+![steps vs calories](https://github.com/user-attachments/assets/0303d36b-36e9-471f-942c-38689ac9ab55)
 
 
 Total steps by the weekday:
