@@ -170,11 +170,13 @@ ggplot(data=combined_data) + geom_point(mapping=aes(x=TotalMinutesAsleep/60, y=C
 ### Summary of the analysis
 + There's a positive correlation between number of total steps each customer has taken with the calories burned. This could obviously be used to encourage/notify customers in order to build positive energy/connection between the user and the product.
 + Users seem to take the most number of steps in middle of the workweek: Tuesday, Wednesday, Thursday. Suggest to users to stay more active in other days through notifications. 
-+ There's a positive correlation on calories burned and sleep time (between 5-10 hours) that shows the importance of enough sleep in burning calories. 
++ There's a positive correlation on calories burned and sleep time (between 5-10 hours) that shows the importance of enough sleep in burning calories.
++ S
++ 
 
 
 ### Recommendations
-1. Encourage users by giving them calories burned notifications as a "reward" notification in Bellabeat products; This should help users to build healthy habits. 
-2. Focus on days where users take the least amount of steps. Suggest activities to the user in order to increase their total steps / activity on these days. 
-3. Send reminders to users on getting enough sleep between 6-10 hours. Focus on the sleep benefits in the messaging to the users. 
-4. Due to data limitations, all the above recommendations might require further validation based on recent data
+1. **Calorie Burn Feedback**: Implement "reward" notifications within Bellabeat products to inform users of their calorie burn, reinforcing positive behavior and encouraging continued activity. Frame these notifications as rewards for activity to motivate users and build healthy habits.
+2. **Targeted Activity Suggestions**: On days with low step counts, proactively suggest personalized activities to help users increase their overall activity levels. These suggestions could be based on user preferences, past behavior, or available resources.
+3. **Sleep Health Promotion**: Remind users of the benefits of 6-10 hours of sleep, emphasizing its positive impact on well-being and overall health. Messaging should focus on the various benefits of adequate sleep, such as improved mood, energy levels, and overall health.
+4. **Further Validation**: Due to data limitations, all the above recommendations might require further validation based on more recent and comprehensive data to ensure their continue relevance and effectiveness. 
