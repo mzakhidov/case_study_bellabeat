@@ -168,11 +168,9 @@ ggplot(data=combined_data) + geom_point(mapping=aes(x=TotalMinutesAsleep/60, y=C
 
 
 ### Summary of the analysis
-+ There's a positive correlation between number of total steps each customer has taken with the calories burned. This could obviously be used to encourage/notify customers in order to build positive energy/connection between the user and the product.
-+ Users seem to take the most number of steps in middle of the workweek: Tuesday, Wednesday, Thursday. Suggest to users to stay more active in other days through notifications. 
-+ There's a positive correlation on calories burned and sleep time (between 5-10 hours) that shows the importance of enough sleep in burning calories.
-+ S
-+ 
++ **Activity and Calorie Expenditure**: A clear positive correlation demonstrates that as users increase their daily step count, they also burn more calories. This reinforces the value of physical activity and can be leveraged in user engagement initiatives.
++ **Mid-Week Activity Peak**: Users are most active during the middle of the workweek (Tuesday, Wednesday, Thursday). This information can be used to optimize the timing of notifications, challenges, or other engagement efforts.
++ **Sleep and Metabolism**: A positive correlation between sleep duration (5-10 hours) and calories burned underscores the importance of sufficient sleep for metabolic health. This insight can be incorporated into educational content and user recommendations.
 
 
 ### Recommendations
