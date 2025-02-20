@@ -69,7 +69,6 @@ daily_intensities <- read.csv("dailyIntensities_merged.csv")
 daily_steps <- read.csv("dailySteps_merged.csv")
 sleep_day <- read.csv("sleepDay_merged.csv")
 weight_log <- read.csv("weightLogInfo_merged.csv") 
-
 ```
 
 ### Data Cleaning
