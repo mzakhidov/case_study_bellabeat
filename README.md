@@ -166,27 +166,6 @@ ggplot(data=daily_activity, aes(x=Weekday, y=TotalSteps)) +
 
 ![steps_weekdays](https://github.com/user-attachments/assets/d9cf24da-94e0-4e15-bf95-0c6d84b7cd00)
 
-User segmentation by activity level:
-
-```
-combined_data <- combined_data %>%
-  mutate(activity_level = case_when(
-    TotalSteps < 5000 ~ "Sedentary",
-    TotalSteps < 10000 ~ "Lightly Active",
-    TotalSteps < 15000 ~ "Moderately Active",
-    TRUE ~ "Very Active"
-  ))
-
-ggplot(combined_data, aes(x = activity_level, fill = activity_level)) + 
-  geom_bar() +  
-  labs(title = "User Segmentation by Activity Level", x = "Activity Level", y = "Count of Users") + 
-  theme_bw() +
-  ylim(0, max(table(combined_data$activity_level)) * 1.1)  
-
-```
-
-![user_segments](https://github.com/user-attachments/assets/027da605-802a-4030-872d-6b493d260869)
-
 
 Correlation between sleep and calories:
 ```
