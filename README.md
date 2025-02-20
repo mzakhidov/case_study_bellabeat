@@ -115,7 +115,6 @@ sum(is.na(daily_intentisities))
 sum(is.na(daily_steps))
 sum(is.na(daily_sleep))
 sum(is.na(weight_log)) <- Sixty five (65) NA values
-
 ```
 
 Adding a new column for weekdays
@@ -127,7 +126,6 @@ daily_activity <- daily_activity %>% mutate( Weekday = weekdays(as.Date(Activity
 Order the days of the week:
 ```
 daily_activity$Weekday <- ordered(daily_activity$Weekday, levels=c("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"))
-
 ```
 
 
@@ -137,7 +135,6 @@ As "daily_activity" file contained metrics on calories, intentisies, steps, it w
 
 ```
 combined_data <- merge(daily_activity,daily_sleep,by = c("Id"), all=TRUE)
-
 ```
 
 
@@ -151,7 +148,6 @@ ggplot(combined_data, aes(x = TotalSteps, y = Calories)) +
   geom_smooth(method = "lm", color = "red") + # Add a trend line
   labs(title = "Steps vs. Calories Burned", x = "Total Steps", y = "Calories Burned") +
   theme_bw()
-
 ```
 
 ![steps vs calories](https://github.com/user-attachments/assets/0303d36b-36e9-471f-942c-38689ac9ab55)
