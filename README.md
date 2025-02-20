@@ -119,7 +119,6 @@ sum(is.na(weight_log)) <- Sixty five (65) NA values
 Adding a new column for weekdays
 ```
 daily_activity <- daily_activity %>% mutate( Weekday = weekdays(as.Date(ActivityDate, "%m/%d/%Y")))
-
 ```
 
 Order the days of the week:
@@ -141,7 +140,6 @@ combined_data <- merge(daily_activity,daily_sleep,by = c("Id"), all=TRUE)
 
 Correlation between total steps and calories: 
 ```
-
 ggplot(combined_data, aes(x = TotalSteps, y = Calories)) +
   geom_point(color = "darkgreen", alpha = 0.5) +
   geom_smooth(method = "lm", color = "red") + # Add a trend line
@@ -165,7 +163,6 @@ ggplot(data=daily_activity, aes(x=Weekday, y=TotalSteps)) +
 Correlation between sleep and calories:
 ```
 ggplot(data=combined_data) + geom_point(mapping=aes(x=TotalMinutesAsleep/60, y=Calories, color=Calories)) + labs(title="Calories vs Time Slept", x="Time Asleep (Hours)", y="Calories")
-
 ```
 ![calories vs time slept](https://github.com/user-attachments/assets/ea7fda76-7baf-454f-a193-3f11699415b4)
 
