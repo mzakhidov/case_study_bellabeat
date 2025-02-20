@@ -45,7 +45,7 @@ beauty, and mindfulness based on their lifestyle and goals.
 
 ### Data Preparation and Processing
 
-Based on the initial review of CSV files through Excel, R studio has been chosen to prepare, process, analyze the data. Initially, the R packages of tidyverse and janitor have been installed and the respective libraries have been loaded. 
+Based on the initial review of CSV files through Excel, R studio has been chosen to prepare, process, analyze the data. Initially, the R packages of tidyverse and janitor have been installed and the respective libraries have been loaded. Also, original csv files have been saved for backup. 
 
 #### Install packages and load libraries
 ```
