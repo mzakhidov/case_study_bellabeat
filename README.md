@@ -180,10 +180,6 @@ ggplot(data=combined_data) + geom_point(mapping=aes(x=TotalMinutesAsleep/60, y=C
 + Users seem to take the most number of steps in middle of the workweek: Tuesday, Wednesday, Thursday.
 + There's a positive correlation on calories burned and sleep time (between 5-10 hours)
 
-### Visualizations
-
-All these data visualizations can be found here: Link
-
 
 ### Recommendations
 1. Encourage users by giving them calories burned notifications as a "reward" notification in Bellabeat products
